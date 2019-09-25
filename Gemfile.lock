@@ -135,6 +135,9 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rubyzip (1.2.4)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -194,6 +197,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   puma (~> 3.11)
   rails (~> 5.2.3)
+  responders
   sass-rails (~> 5.0)
   selenium-webdriver
   sqlite3
