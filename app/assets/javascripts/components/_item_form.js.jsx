@@ -1,4 +1,4 @@
-class NewItem extends React.Component {
+class ItemForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -16,6 +16,11 @@ class NewItem extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         console.log("Name is : "+this.state.name+ " / Description is : "+this.state.description);
+        this.props.onSubmit({
+            name: this.state.name,
+            description: this.state.description
+        });
+        this.setState({name: '', description: ''});
     }
 
     handleNameChange(event) {
@@ -31,7 +36,7 @@ class NewItem extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" value={this.state.name} onChange={this.handleNameChange} placeholder="Enter new name... " />
-                    <input type="text" onChange={this.handleDescChange} placeholder="Enter its description..." />
+                    <input type="text" value={this.state.description} onChange={this.handleDescChange} placeholder="Enter its description..." />
                     <input type="submit" value="Submit" />
                 </form>
             </div>

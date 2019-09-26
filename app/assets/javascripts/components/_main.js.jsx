@@ -3,7 +3,7 @@ class Main extends React.Component {
         return (
             <div>
                 <Header />
-                <Body />
+                <ItemsContainer />
             </div>
         )
     }
